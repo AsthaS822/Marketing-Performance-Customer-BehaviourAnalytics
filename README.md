@@ -1,187 +1,149 @@
-📊 Customer Personality Analysis | SQL + Python + Tableau
-Project Overview
+# 📊 Marketing Customer Analytics | SQL, Python & Tableau
 
-This project analyzes customer demographics, purchasing behavior, and marketing campaign performance to uncover actionable business insights. Using SQL for data analysis, Python for exploratory data analysis (EDA), and Tableau for dashboard development, the project identifies high-value customer segments, purchasing patterns, and campaign effectiveness to support data-driven marketing decisions.
+## Project Overview
 
-Business Problem
+This project analyzes customer demographics, purchasing behavior, and marketing campaign performance using the Marketing Campaign dataset. The objective is to understand customer spending patterns, identify valuable customer segments, and generate business insights that can support more effective marketing strategies.
 
-Marketing teams often struggle to understand:
+The project combines **SQL** for data preparation and business analysis, **Python** for feature engineering and exploratory data analysis (EDA), and **Tableau** for interactive dashboard visualization.
 
-Which customers generate the highest revenue
-How purchasing behavior differs across customer groups
-Which sales channels customers prefer
-How effective marketing campaigns are
-Which customer segments should receive targeted promotions
+---
 
-This project addresses these questions through end-to-end customer analytics.
+## Business Objectives
 
-Project Objectives
-Clean and prepare customer marketing data
-Perform exploratory data analysis
-Analyze customer purchasing behavior
-Segment customers based on spending
-Evaluate campaign performance
-Build interactive Tableau dashboards
-Generate business recommendations for marketing optimization
-Dataset
+The analysis aims to answer several key business questions:
 
-The dataset contains 2,240 customer records with 29 features, including:
+* Who are the company's highest-value customers?
+* Which products contribute the most to customer spending?
+* How do purchasing behaviors differ across customer segments?
+* Which purchase channels (Web, Store, Catalog) are most frequently used?
+* How effective are previous marketing campaigns?
+* How can customer segmentation improve marketing decisions?
 
-Customer Information
-Age
-Education
-Marital Status
-Income
-Children at Home
-Spending
-Wine
-Fruits
-Meat Products
-Fish Products
-Sweet Products
-Gold Products
-Purchase Channels
-Web Purchases
-Catalog Purchases
-Store Purchases
-Marketing
-Campaign Acceptance
-Customer Response
-Complaints
-Tools & Technologies
-Tool	Purpose
-SQL	Data Cleaning & Advanced Analysis
-Python	EDA & Feature Engineering
-Pandas	Data Manipulation
-Matplotlib	Visualization
-Seaborn	Statistical Charts
-Tableau	Interactive Dashboard
-GitHub	Portfolio Hosting
-SQL Analysis
+---
 
-The SQL phase focused on business-oriented analysis rather than simple queries.
+## Dataset
 
-Data Cleaning
-Removed unnecessary columns
-Checked duplicates
-Verified missing values
-Standardized data
-Customer Segmentation
+The dataset contains **2,240 customer records** and **29 attributes**, including:
 
-Customers were segmented into:
+* Customer demographics (Age, Education, Marital Status, Income)
+* Household information
+* Product spending across six product categories
+* Purchase channels (Web, Store, Catalog)
+* Marketing campaign responses
+* Customer complaints
+* Recency of purchases
 
-High Value
-Medium Value
-Low Value
+---
 
-based on their total spending.
+## Tools & Technologies
 
-Purchase Behaviour Analysis
+* **SQL** – Data cleaning, transformation, analysis, window functions and views
+* **Python** – Pandas, Matplotlib and Seaborn for EDA and feature engineering
+* **Tableau** – Interactive dashboard development
+* **Git & GitHub** – Version control and project documentation
 
-Analysis included:
+---
 
-Average customer spending
-Preferred purchase channels
-Product category performance
-Purchase frequency
-Campaign acceptance
-Customer lifetime characteristics
-Advanced SQL Techniques
-CTEs
-Window Functions
-CASE Statements
-Aggregate Functions
-Ranking Functions
-Customer Segmentation Logic
-Python Analysis
+## Project Workflow
 
-Python was used for exploratory data analysis and feature engineering.
+### 1. Data Preparation (SQL)
 
-Feature Engineering
+* Created the marketing database and imported the dataset
+* Cleaned and validated the data
+* Handled missing values
+* Created calculated fields for analysis
 
-Created:
+### 2. Exploratory Data Analysis (SQL)
 
-Age
-Total Spend
-Total Purchases
-Customer Segment
-Exploratory Data Analysis
+Performed SQL analysis to understand:
 
-Visualizations include:
+* Customer demographics
+* Income distribution
+* Product spending
+* Purchase channels
+* Campaign responses
 
-Customer Age Distribution
-Income Distribution
-Education Distribution
-Customer Segments
-Total Spending
-Purchase Behaviour
-Campaign Response
-Correlation Heatmap
-Tableau Dashboard
+### 3. Customer Analysis
 
-The Tableau dashboard presents interactive business insights including:
+Analyzed:
 
-Customer Demographics
-Spending Analysis
-Purchase Behaviour
-Campaign Performance
-Customer Segmentation
-KPI Summary
-Key Insights
-Customer Segmentation
+* Top spending customers
+* Spending by education
+* Spending by marital status
+* Customer response patterns
 
-High-value customers contribute significantly more revenue despite representing a smaller proportion of the customer base.
+### 4. Purchase Behaviour Analysis
 
-Purchase Behaviour
+Evaluated:
 
-Medium-value customers make the highest number of web purchases, while high-value customers generate greater overall spending through multiple purchase channels.
+* Total customer spending
+* Purchase frequency
+* Web vs Store vs Catalog purchases
+* Product category performance
 
-Spending Patterns
+### 5. Customer Segmentation
 
-Wine and meat products account for the largest share of customer spending.
+Created new business features including:
 
-Marketing Campaigns
+* Age
+* Total Spend
+* Total Purchases
+* Customer Segment (Low, Medium and High Value)
 
-Only a relatively small percentage of customers accepted marketing campaigns, indicating opportunities for improving targeting strategies.
+### 6. Advanced SQL
 
-Customer Demographics
+Applied advanced SQL concepts including:
 
-Middle-aged customers form the largest customer segment and contribute the majority of purchases.
+* Common Table Expressions (CTEs)
+* Window Functions
+* RANK()
+* DENSE_RANK()
+* ROW_NUMBER()
+* CASE statements
+* Views
 
-Business Recommendations
-1. Target High-Value Customers
+### 7. Python Analysis
 
-Offer loyalty rewards and personalized promotions to retain premium customers.
+Performed:
 
-2. Increase Online Sales
+* Data quality checks
+* Feature engineering
+* Exploratory data analysis
+* Customer demographic analysis
+* Spending analysis
+* Purchase behaviour visualization
+* Correlation analysis
 
-Encourage low-value customers to purchase online using exclusive discounts and personalized recommendations.
+### 8. Tableau Dashboard
 
-3. Improve Campaign Targeting
+The final dashboard presents interactive visualizations for:
 
-Focus marketing efforts on customer segments with higher historical response rates.
+* Customer demographics
+* Customer segments
+* Spending analysis
+* Purchase behaviour
+* Campaign performance
+* Key business KPIs
 
-4. Promote High-Performing Products
+---
 
-Prioritize marketing campaigns for product categories with consistently higher sales.
+## Repository Structure
 
-5. Cross-Selling Opportunities
-
-Recommend complementary products based on previous purchase history.
-
-6. Personalized Marketing
-
-Develop customer-specific offers using spending behavior and demographic characteristics.
-
-Project Structure
+```text
 Marketing-Customer-Analytics/
 │
 ├── Dataset/
+│   └── marketing_campaign.csv
 │
 ├── SQL/
 │   ├── 01data_setup_and_cleaning.sql
 │   ├── 02exploratory_data_analysis.sql
 │   ├── 03customer_analysis.sql
+│   ├── 04purchase_behavior_analysis.sql
+│   ├── 05customer_segmentation.sql
+│   ├── 06advanced_sql.sql
+│   ├── 07views.sql
+│   └── 08views.sql
 │
 ├── Python/
 │   └── Marketing_analytics_insights.ipynb
@@ -189,25 +151,28 @@ Marketing-Customer-Analytics/
 ├── Tableau/
 │   └── Dashboard.twbx
 │
-├── Images/
-│
-├── README.md
-│
-└── requirements.txt
-Skills Demonstrated
-SQL
-Advanced SQL
-Customer Analytics
-Data Cleaning
-Data Wrangling
-Feature Engineering
-Exploratory Data Analysis
-Customer Segmentation
-Business Intelligence
-Data Visualization
-Tableau
-Business Insights
-Marketing Analytics
-Project Outcome
+└── README.md
+```
 
-This project demonstrates an end-to-end marketing analytics workflow, combining SQL, Python, and Tableau to transform raw customer data into actionable business insights. The findings support data-driven marketing strategies, customer segmentation, and campaign optimization, showcasing practical analytical skills applicable to real-world business scenarios.
+---
+
+## Key Skills Demonstrated
+
+* SQL
+* Advanced SQL
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Customer Segmentation
+* Purchase Behaviour Analysis
+* Feature Engineering
+* Window Functions
+* Data Visualization
+* Tableau Dashboard Development
+* Business Insight Generation
+
+---
+
+## Project Outcome
+
+This project demonstrates an end-to-end marketing analytics workflow, transforming raw customer data into meaningful business insights. The combination of SQL, Python, and Tableau provides a practical approach to customer segmentation, purchase behaviour analysis, and marketing performance evaluation while showcasing skills commonly used in real-world data analytics projects.
+
