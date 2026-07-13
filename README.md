@@ -1,202 +1,191 @@
-# 📊 Marketing Performance Analytics | SQL & Python
+# 📊 Customer Behavior & Marketing Analytics | SQL & Python
 
-## Project Overview
+## 📖 Project Overview
 
-This project analyzes customer demographics, purchasing behavior, and marketing campaign performance using the Marketing Campaign dataset. The goal is to understand customer spending patterns, identify valuable customer segments, and generate business insights that support data-driven marketing decisions.
+This project analyzes customer demographics, purchasing behavior, product preferences, and marketing campaign performance using the **Marketing Campaign** dataset. The objective is to understand customer spending patterns, identify high-value customers, evaluate campaign effectiveness, and generate business insights that support data-driven business decisions.
 
-The project combines **SQL** for data preparation and business analysis with **Python** for feature engineering, statistical analysis, exploratory data analysis (EDA), and visualization.
+The project combines **SQL** for data preparation and business analysis with **Python** for data cleaning, exploratory data analysis (EDA), feature engineering, visualization, customer segmentation, and basic predictive analysis.
 
 ---
 
-## Business Objectives
+## 🎯 Business Objectives
 
-This project aims to answer key business questions such as:
+This project answers the following business questions:
 
 - Who are the company's highest-value customers?
-- Which product categories contribute the most revenue?
-- How do customer purchasing behaviors vary across segments?
+- Which product categories generate the highest revenue?
+- How do customer purchasing patterns differ across segments?
 - Which purchase channels are preferred by customers?
-- How effective are previous marketing campaigns?
-- What business insights can improve future marketing strategies?
+- How effective are the marketing campaigns?
+- Which customer groups are more likely to respond to campaigns?
+- What insights can improve future marketing strategies?
 
 ---
 
-## Dataset
+## 📂 Dataset
 
-The dataset contains **2,240 customer records** and **29 attributes**, including:
+The dataset contains **2,240 customer records** and **29 features**, including:
 
-- Customer demographics (Age, Education, Marital Status, Income)
-- Household information
-- Product spending across multiple categories
-- Purchase channels (Web, Store, Catalog)
-- Marketing campaign responses
-- Customer complaints
-- Purchase recency
-
----
-
-## Tools & Technologies
-
-- **SQL** – Data cleaning, transformation, analysis, CTEs, Window Functions and Views
-- **Python** – Pandas, NumPy, Matplotlib and Seaborn
-- **Jupyter Notebook** – Data analysis and visualization
-- **Git & GitHub** – Version control and project documentation
-
----
-
-# Project Workflow
-
-## 1. Data Preparation (SQL)
-
-- Created the marketing database
-- Imported the dataset
-- Cleaned and validated the data
-- Created calculated columns for analysis
-
----
-
-## 2. Exploratory Data Analysis (SQL)
-
-Performed SQL analysis to explore:
-
-- Customer demographics
-- Income distribution
-- Product spending
-- Purchase channels
-- Campaign responses
-
----
-
-## 3. Customer Analysis
-
-Analyzed:
-
-- Highest spending customers
-- Income distribution
-- Spending by education
-- Spending by marital status
-- Campaign response behavior
-
----
-
-## 4. Purchase Behaviour Analysis
-
-Analyzed:
-
-- Total customer spending
-- Purchase frequency
-- Online vs Store vs Catalog purchases
-- Product category performance
-
----
-
-## 5. Customer Segmentation
-
-Created business features including:
-
+### Customer Information
 - Age
+- Income
+- Education
+- Marital Status
+- Household Information
+
+### Purchase Behavior
 - Total Spend
-- Total Purchases
-- Customer Segments (Low, Medium and High Value)
+- Purchase Recency
+- Web Purchases
+- Store Purchases
+- Catalog Purchases
+- Website Visits
+
+### Product Categories
+- Wines
+- Fruits
+- Meat Products
+- Fish Products
+- Sweet Products
+- Gold Products
+
+### Marketing Information
+- Campaign Acceptance (Campaign 1–5)
+- Overall Campaign Response
+- Customer Complaints
 
 ---
 
-## 6. Advanced SQL Analysis
+## 🛠️ Tools & Technologies
 
-Implemented:
-
-- Common Table Expressions (CTEs)
-- Window Functions
-- RANK()
-- DENSE_RANK()
-- ROW_NUMBER()
-- CASE Statements
-- Views
+- **SQL** – Data cleaning, joins, aggregation, CTEs, Window Functions, Views, and business analysis
+- **Python** – Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+- **Jupyter Notebook**
+- **Git & GitHub**
 
 ---
 
-## 7. Python Analysis
+## 📈 Project Workflow
 
-Performed:
+### **1. SQL Analysis**
+- Data cleaning and validation
+- Exploratory data analysis
+- Customer analysis
+- Purchase behavior analysis
+- Customer segmentation
+- Advanced SQL using CTEs, Window Functions, CASE statements, and Views
 
-- Data Quality Assessment
-- Feature Engineering
-- Statistical Summary
-- Distribution Analysis
-- Correlation Analysis
-- Outlier Detection
-- Customer Profiling
-- Purchase Behaviour Analysis
-- Campaign Response Analysis
-- Product Category Analysis
-- Business Insights
+### **2. Python Analysis**
+- Data quality assessment
+- Feature engineering
+- Exploratory Data Analysis (EDA)
+- Statistical analysis
+- Correlation analysis
+- Distribution analysis
+- Outlier detection
+- Customer profiling
+- Product preference analysis
+- Campaign response analysis
+- Campaign acceptance rate analysis
+- Purchase recency analysis
+- Simple predictive analysis using Linear Regression
 
 ---
 
-## Repository Structure
+## 📊 Analysis Performed
+
+### **Customer Analysis**
+- Customer segmentation
+- Income analysis
+- Spending behavior
+- Purchase frequency
+- Customer profiling
+
+### **Marketing Analysis**
+- Overall campaign response rate
+- Campaign-wise acceptance rate
+- Customer response behavior
+- Marketing campaign performance
+
+### **Product Analysis**
+- Product category performance
+- Product preference by customer segment
+- Average spending across product categories
+
+### **Purchase Behavior Analysis**
+- Purchase channels (Web, Store, Catalog)
+- Purchase recency analysis
+- Spending by number of children
+- Website visits vs customer spending
+
+---
+
+## 📁 Repository Structure
 
 ```text
-Marketing-Performance-Analytics/
+Customer-Behavior-Marketing-Analytics/
 │
-├── marketing_campaign.csv
+├── Dataset/
+│   └── marketing_campaign.csv
 │
-├── python/
-│   └── 01_marketing_analysis.ipynb
+├── SQL/
+│   ├── 01_data_setup_and_cleaning.sql
+│   ├── 02_exploratory_data_analysis.sql
+│   ├── 03_customer_analysis.sql
+│   ├── 04_purchase_behavior_analysis.sql
+│   ├── 05_customer_segmentation.sql
+│   ├── 06_advanced_sql.sql
+│   └── 07_views.sql
 │
-├── sql/
-│   ├── 01data_setup_and_cleaning.sql
-│   ├── 02exploratory_data_analysis.sql
-│   ├── 03customer_analysis.sql
-│   ├── 04purchase_behavior_analysis.sql
-│   ├── 05customer_segmentation.sql
-│   ├── 06advanced_sql.sql
-│   ├── 07views.sql
-│   └── 08views.sql
+├── Python/
+│   └── customer_behavior_marketing_analysis.ipynb
 │
 └── README.md
 ```
 
 ---
 
-# Key Skills Demonstrated
+## 💡 Key Business Insights
+
+- High Value customers generate the highest revenue and purchase more frequently than other customer segments.
+- Customer income shows a positive relationship with overall spending.
+- Wine and Meat Products contribute the highest customer spending across all product categories.
+- Most customers belong to the Low Value segment, creating opportunities for targeted promotions and personalized marketing.
+- Only about **15%** of customers accepted the marketing campaign, indicating the need for improved customer targeting.
+- Campaign acceptance rates vary across different campaigns, helping identify more effective marketing strategies.
+- Medium Value customers show strong engagement through online purchase channels.
+- Purchase recency helps identify active and inactive customers for customer retention strategies.
+- Product preference analysis shows that customer segments have different purchasing patterns, enabling personalized product recommendations.
+
+---
+
+## 💼 Skills Demonstrated
 
 - SQL
 - Advanced SQL
+- Python
 - Data Cleaning
-- Exploratory Data Analysis (EDA)
 - Feature Engineering
-- Customer Segmentation
-- Purchase Behaviour Analysis
+- Exploratory Data Analysis (EDA)
 - Statistical Analysis
 - Data Visualization
-- Business Insight Generation
+- Customer Segmentation
+- Customer Analytics
 - Marketing Analytics
+- Predictive Analytics
+- Business Insight Generation
 
 ---
 
-# Key Business Insights
+## 🚀 Future Improvements
 
-- High Value customers contribute the highest revenue and spending.
-- Income has a positive relationship with customer spending.
-- Wine products generate the highest sales among all product categories.
-- Most customers belong to the Low Value segment, creating opportunities for targeted marketing.
-- Campaign response rates are relatively low, highlighting the need for improved customer targeting.
-- Customer segmentation helps identify profitable customer groups and supports better marketing decisions.
-
----
-
-# Future Improvements
-
-The project will be extended with:
-
-- Interactive Tableau Dashboard
-- Power BI Dashboard
+- Interactive Power BI Dashboard
 - Customer Lifetime Value (CLV) Analysis
-- Predictive Machine Learning Models
-- Marketing Campaign Performance Dashboard
+- Customer Churn Prediction
+- Machine Learning-based Customer Segmentation
 
 ---
 
-## Project Outcome
+## 📌 Project Outcome
 
-This project demonstrates an end-to-end marketing analytics workflow using SQL and Python. It transforms raw customer data into meaningful business insights through data cleaning, feature engineering, exploratory analysis, customer segmentation, and statistical visualization. The project showcases practical skills commonly used in real-world marketing and business analytics.
+This project demonstrates an end-to-end customer behavior and marketing analytics workflow using **SQL** and **Python**. It transforms raw customer data into meaningful business insights through data cleaning, exploratory analysis, customer segmentation, visualization, and predictive analysis, showcasing practical skills used in real-world data analytics and marketing analytics projects.
