@@ -73,7 +73,15 @@ The dataset contains **2,240 customer records** and **29 features**, including:
 - Customer analysis
 - Purchase behavior analysis
 - Customer segmentation
-- Advanced SQL using CTEs, Window Functions, CASE statements, and Views
+- Advanced SQL :
+• Aggregate Functions
+• CASE Statements
+• CTEs
+• Window Functions
+• Views
+• GROUP BY
+• HAVING
+• Subqueries
 
 ### **2. Python Analysis**
 - Data quality assessment
